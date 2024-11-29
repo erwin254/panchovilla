@@ -7,8 +7,8 @@
 	<meta charset="UTF-8">
 	<meta name="csrf_token" content="<?php echo createToken(); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Email Verification - Secure Site</title>
-	<link rel="stylesheet" href="<?php echo HOST_URL . '/style.css'; ?>" />
+	<title>Email Verification - Pancho Villa</title>
+	<link rel="stylesheet" href="<?php echo HOST_URL . '/backend/style.css'; ?>" />
 </head>
 <body>
 	<?php
@@ -75,6 +75,6 @@
 
 
 
-	<script src="<?php echo HOST_URL . '/script.js' ?>"></script>
+	<script src="<?php echo HOST_URL . '/backend/script.js' ?>"></script>
 </body>
 </html>
