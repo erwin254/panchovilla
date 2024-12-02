@@ -58,7 +58,7 @@ function login() {
 				document.getElementById('errs').innerHTML += '<div class="err">Tu correo no ha sido activado.</div>';
 				break;
 			default:
-				document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+				document.getElementById('errs').innerHTML += '<div class="err">Se produjo un error desconocido. Inténtelo de nuevo más tarde.</div>';
 		}
 		setTimeout(function() {
 			document.getElementById('errs').style.transition = transition;
@@ -81,61 +81,61 @@ function register() {
 			for(var i = 0;i < data.length;++i) {
 				switch(data[i]) {
 					case 0:
-						document.getElementById('errs').innerHTML += '<div>Your account has been created!</div><div>Please validate your email by checking your inbox for a validation link before logging in.</div>';
+						document.getElementById('errs').innerHTML += '<div>Tu cuenta ha sido creada y debe ser activada por un administrador.</div>';
 						document.getElementById('registerForm').reset();
 						break;
 					case 1:
-						document.getElementById('errs').innerHTML += '<div class="err">Invalid name entered. (only use letters, spaces, and hyphens)</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Nombre no válido ingresado. (use solo letras, espacios y guiones)</div>';
 						break;
 					case 2:
-						document.getElementById('errs').innerHTML += '<div class="err">Invalid email entered.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Correo electrónico no válido ingresado.</div>';
 						break;
 					case 3:
-						document.getElementById('errs').innerHTML += '<div class="err">Email does not exist. (This domain does not have a mail server)</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">El correo electrónico no existe. (Este dominio no tiene servidor de correo)</div>';
 						break;
 					case 4:
-						document.getElementById('errs').innerHTML += '<div class="err">Password must contain: <ul><li>At least 8 characters</li><li>At least one lower case letter</li><li>At least one upper case letter</li><li>At least one number</li><li>At least one special character (~?!@#$%^&*)</li></ul></div>';
+						document.getElementById('errs').innerHTML += '<div class="err">La contraseña debe contener: <ul><li>Al menos 8 caracteres</li><li>Al menos una letra minúscula</li><li>Al menos una letra mayúscula</li><li>Al menos un número</li><li>Al menos un carácter especial (~?!@#$%^&*)</li></ul></div>';
 						break;
 					case 5:
-						document.getElementById('errs').innerHTML += '<div class="err">Passwords do not match. Please re-enter your confirmed password.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Las contraseñas no coinciden. Vuelva a ingresar su contraseña confirmada.</div>';
 						break;
 					case 6:
-						document.getElementById('errs').innerHTML += '<div class="err">Failed to add account to database. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">No se pudo agregar la cuenta a la base de datos. Inténtelo de nuevo más tarde.</div>';
 						break;
 					case 7:
-						document.getElementById('errs').innerHTML += '<div class="err">An account with this email already exists</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Ya existe una cuenta con este correo electrónico</div>';
 						break;
 					case 8:
-						document.getElementById('errs').innerHTML += '<div class="err">Failed to connect to the database. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">No se pudo conectar a la base de datos. Inténtelo de nuevo más tarde.</div>';
 						break;
 					case 9:
-						document.getElementById('errs').innerHTML += '<div class="err">Invalid CSRF Token. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Token CSRF no válido. Inténtelo de nuevo más tarde.</div>';
 						break;
 					case 10:
-						document.getElementById('errs').innerHTML += '<div class="err">Failed to send email. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">No se pudo enviar el correo electrónico. Por favor inténtalo de nuevo más tarde.</div>';
 						break;
 					case 11:
-						document.getElementById('errs').innerHTML += '<div class="err">Failed to insert request into database. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">No se pudo insertar la solicitud en la base de datos. Inténtelo de nuevo más tarde.</div>';
 						break;
 					case 12:
-						document.getElementById('errs').innerHTML += '<div class="err">You have exceeded your number of allowed validation requests per day</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Ha excedido su número de solicitudes de validación permitidas por día.</div>';
 						break;
 					case 13:
-						document.getElementById('errs').innerHTML += '<div class="err">The user with this email is already validated</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">El usuario con este correo electrónico ya está validado.</div>';
 						break;
 					case 14:
-						document.getElementById('errs').innerHTML += '<div class="err">A user with this email does not exist</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Un usuario con este correo electrónico no existe</div>';
 						break;
 					case 15:
-						document.getElementById('errs').innerHTML += '<div class="err">Failed to connect to database. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">No se pudo conectar a la base de datos. Inténtelo de nuevo más tarde.</div>';
 						break;
 					default:
-						document.getElementById('errs').innerHTML += '<div class="err">An unknown error occurred. Please try again later.</div>';
+						document.getElementById('errs').innerHTML += '<div class="err">Se produjo un error desconocido. Inténtelo de nuevo más tarde.</div>';
 				}
 			}
 		}
 		catch(e) {
-			document.getElementById('errs').innerHTML = '<div class="err">An unknown error occurred. Please try again later.</div>';
+			document.getElementById('errs').innerHTML = '<div class="err">Se produjo un error desconocido. Inténtelo de nuevo más tarde.</div>';
 		}
 		setTimeout(function() {
 			document.getElementById('errs').style.transition = transition;

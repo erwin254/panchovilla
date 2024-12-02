@@ -15,7 +15,7 @@
 						$hash = password_hash($verifyCode, PASSWORD_DEFAULT);
 						$requestID = sqlInsert($C, 'INSERT INTO requests VALUES (NULL, ?, ?, ?, 0)', 'isi', $user['id'], $hash, time());
 						if($requestID !== -1) {
-							if(sendEmail($email, $user['name'], 'Email Verification', '<a href="' . VALIDATE_EMAIL_ENDPOINT . '/' . $requestID . '/' . urlSafeEncode($verifyCode). '" />Click this link to verify your email</a>')) {
+							if(sendEmail($email, $user['name'], 'Verificación de Email', 'Correo registrado, pida a un administrador activar su usuario.')) {
 								return 0;
 							}
 							else {
