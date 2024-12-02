@@ -21,6 +21,7 @@ define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
 // Email Credentials
 define('SMTP_HOST', $_ENV['SMTP_HOST']);
 define('SMTP_PORT', $_ENV['SMTP_PORT']);
+define('SMTP_ENCRYPTION', $_ENV['SMTP_ENCRYPTION']);
 define('SMTP_USERNAME', $_ENV['SMTP_USERNAME']);
 define('SMTP_PASSWORD', $_ENV['SMTP_PASSWORD']);
 define('SMTP_FROM', $_ENV['SMTP_FROM']);

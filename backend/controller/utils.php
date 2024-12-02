@@ -87,14 +87,22 @@
 
 	function sendEmail($to, $toName, $subj, $msg) {
 		$mail = new PHPMailer(true);
+		$mail->SMTPOptions = array(
+			'ssl' => array(
+				'verify_peer' => false,
+				'verify_peer_name' => false,
+				'allow_self_signed' => true,
+			)
+		  );
 		try {
 	    //Server settings
-	    $mail->isSMTP();
+	    $mail->SMTPDebug = 0;
+		$mail->isSMTP();
 	    $mail->Host       = SMTP_HOST;
 	    $mail->SMTPAuth   = true;
 	    $mail->Username   = SMTP_USERNAME;
 	    $mail->Password   = SMTP_PASSWORD;
-	    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+	    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 	    $mail->Port       = SMTP_PORT;
 
 	    //Recipients
@@ -110,6 +118,6 @@
 	    return true;
 		} 
 		catch(Exception $e) {
-			return false;
+			return $e;
 		}
 	}

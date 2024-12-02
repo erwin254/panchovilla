@@ -1,7 +1,5 @@
 <?php
 	require_once 'utils.php';
-
-
 	// Validate post variables & CSRF token
 	$errors = [];
 
