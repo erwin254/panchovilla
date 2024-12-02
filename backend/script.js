@@ -29,7 +29,7 @@ function request(url, data, callback) {
 
 // index.php
 function logout() {
-	request('php/logout.php', false, function(data) {
+	request('controller/logout.php', false, function(data) {
 		if(data === '0') {
 			window.location = 'login';
 		}
@@ -39,7 +39,7 @@ function logout() {
 
 // login.php
 function login() {
-	request('php/login.php', '#loginForm', function(data) {
+	request('controller/login.php', '#loginForm', function(data) {
 		document.getElementById('errs').innerHTML = "";
 		var transition = document.getElementById('errs').style.transition;
 		document.getElementById('errs').style.transition = "none";
@@ -72,7 +72,7 @@ function login() {
 
 // register.php
 function register() {
-	request('php/register.php', '#registerForm', function(data) {
+	request('controller/register.php', '#registerForm', function(data) {
 		document.getElementById('errs').innerHTML = "";
 		var transition = document.getElementById('errs').style.transition;
 		document.getElementById('errs').style.transition = "none";
@@ -151,7 +151,7 @@ function register() {
 
 // resetPassword.php
 function passwordResetRequest() {
-	request('php/passwordResetRequest.php', '#resetPasswordForm', function(data) {
+	request('controller/passwordResetRequest.php', '#resetPasswordForm', function(data) {
 		document.getElementById('errs').innerHTML = "";
 		var transition = document.getElementById('errs').style.transition;
 		document.getElementById('errs').style.transition = "none";
@@ -190,7 +190,7 @@ function passwordResetRequest() {
 	});
 }
 function changePassword() {
-	request('php/changePassword.php', '#changePasswordForm', function(data) {
+	request('controller/changePassword.php', '#changePasswordForm', function(data) {
 		document.getElementById('errs').innerHTML = "";
 		var transition = document.getElementById('errs').style.transition;
 		document.getElementById('errs').style.transition = "none";
