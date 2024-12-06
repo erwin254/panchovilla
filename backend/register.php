@@ -14,7 +14,7 @@
 	
 	<div class="formWrapper">
 		<form id="registerForm">
-			<h1>Register</h1>
+			<h1>Registrar cuenta</h1>
 			<div id="errs" class="errcontainer"></div>
 			<div class="inputblock">
 				<label for="name">Nombre</label>
